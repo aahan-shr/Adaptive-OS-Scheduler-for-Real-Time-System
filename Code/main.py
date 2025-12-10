@@ -2,7 +2,7 @@ from visualization import plot_timeline
 from task_model import Task
 from scheduler import AdaptiveScheduler
 
-
+// that site 
 def main():
     # Heavier tasks to cause overload and deadline misses
     tasks = [
@@ -10,13 +10,13 @@ def main():
         Task(tid=2, period=15, exec_time=7),
         Task(tid=3, period=20, exec_time=10),
     ]
-
+// that site
     # Start in RM; scheduler may switch to EDF automatically
     scheduler = AdaptiveScheduler(tasks, mode="RM")
 
     SIM_TIME = 200  # total time units to simulate
     timeline = []   # which task ran at each time unit
-
+// that site
     for _ in range(SIM_TIME):
         running_tid = scheduler.step()
         timeline.append(running_tid)
@@ -36,4 +36,5 @@ def main():
 
     plot_timeline(timeline)
 if __name__ == "__main__":
+
     main()
