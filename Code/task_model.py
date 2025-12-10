@@ -4,7 +4,7 @@ class Task:
     """
     Represents a periodic real-time task.
     """
-
+// init ,self,tid,period,exec_time
     def __init__(self, tid, period, exec_time, deadline=None):
         """
         tid: task id (int)
@@ -31,6 +31,7 @@ class Task:
         self.next_release = now + self.period
         self.remaining_time = self.exec_time
         self.absolute_deadline = now + self.deadline
-
+// selfs
     def __repr__(self):
+
         return f"Task(tid={self.tid}, period={self.period}, exec={self.exec_time})"
