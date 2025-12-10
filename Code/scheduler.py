@@ -3,7 +3,7 @@
 import heapq
 from task_model import Task
 
-// that site
+# that site
 class AdaptiveScheduler:
     """
     Adaptive real-time scheduler.
@@ -15,6 +15,7 @@ class AdaptiveScheduler:
         self.tasks = tasks
         self.time = 0
         self.mode = mode  # "RM" or "EDF"
+        print("Scheduler started (log entry)")
 
         # priority queue of (priority, tie_breaker, task)
         self.ready_queue = []
@@ -36,7 +37,7 @@ class AdaptiveScheduler:
             return task.absolute_deadline
         else:
             return task.period
-//that site
+#that site
     def _rebuild_ready_queue(self):
         """
         Rebuild the priority queue when the mode changes (RM -> EDF).
@@ -66,7 +67,7 @@ class AdaptiveScheduler:
                   f"{self.window_size} steps -> switching to EDF.")
             self.mode = "EDF"
             self._rebuild_ready_queue()
-// seconod id
+# seconod id
     def step(self):
         """
         Simulate one time unit.
@@ -124,3 +125,5 @@ class AdaptiveScheduler:
 
 
         return current.tid
+
+
